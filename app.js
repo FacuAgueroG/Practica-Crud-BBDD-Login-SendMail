@@ -15,7 +15,7 @@ const routeStore = require ("./routes/store")
 const routelogin = require ("./routes/login")
 const routerinventario = require ("./routes/inventario");
 const routeraddItem = require("./routes/addItem");
-const routeEditItem = require("./routes/editItem");
+const routeEditItem = require("./routes/edititem");
 
 
 const app = express();
