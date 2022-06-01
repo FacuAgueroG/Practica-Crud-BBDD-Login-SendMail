@@ -4,7 +4,7 @@ const express = require ("express");
 const path = require ("path");
 require("dotenv").config();
 const session = require("express-session");
-const PORT = 3000;
+const PORT = process.env.PORT || 3000
 const hbs = require ("hbs");
 hbs.registerPartials(path.join(__dirname,"./views/partials"));
 const fileupload = require("express-fileupload");
