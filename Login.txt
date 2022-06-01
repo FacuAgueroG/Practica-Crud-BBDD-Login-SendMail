@@ -1,0 +1,3 @@
+Para logearse
+user: admin
+pass: admin

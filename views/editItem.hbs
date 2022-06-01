@@ -1,0 +1,44 @@
+<body class="bodyeditItem">
+    
+<div class="container">
+<form class="row g-2 mt-5" id="editItemform" action="/editProduct" method="POST" enctype="multipart/form-data">
+
+<input type="text" name="id" value="{{product.id}}" hidden>
+  <div class="form-group mb-3">
+    <label for="modelo" class="form-label">Modelo</label>
+    <input type="text" class="form-control" id="modeloedit" name="modelo" value={{product.modelo}} autofocus>
+  </div>
+
+  <div class="form-group mb-3"></div> 
+ <label for="tipo">Tipo</label> 
+ <select id="tipoedit" name="tipo" class="form-control form-control-sm">
+  <option>{{product.tipo}}</option>
+  <option>Sol</option>
+  <option>Vision</option>
+</select> 
+
+  <div class="form-group mb-3">
+    <label for="descripcion">Descripcion</label>
+    <input type="text" class="form-control" id="descripcionedit" value="{{product.descripcion}}" name="descripcion">
+  </div>
+
+
+<div class="form-group mb-3">
+    <label for="cantidad">Cantidad</label>
+    <input type="int" class="form-control" id="cantidadedit" name="cantidad" value="{{product.cantidad}}">
+  </div>
+
+<input type="text" value="{{product.img}}" name="prevImg" hidden >
+
+  <div class="form-group mb-3">
+    <label for="imgedit">Cargar imagen</label>
+    <input type="file" class="form-control" id="imgedit" name="imgedit">
+  </div>
+  
+  <div class="btn-editItem">
+  <input type="submit" value="Cambiar" class="btn btn-primary btn-sm" id="btn-cambiar">
+  <div class="btn-group">
+  <a href="/deleteProduct/{{product.id}}"><input type="button" value="Borrar" class="btn btn-danger btn-sm ms-2"></a>
+  <a href="/inventario"><input type="button" value="Cancelar" class="btn btn-secondary btn-sm ms-2"></a></div></div>
+</div>
+</body>
