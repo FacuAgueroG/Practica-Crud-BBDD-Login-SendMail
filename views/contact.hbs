@@ -1,61 +1,43 @@
 <body class="containerForm">
-      <div class="container">
-          <form id="formContact" action="contact" method="post">
-      
-  <div class="row">
-
-
-  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+  <div class="container">
+    <form id="formContact" action="contact" method="post">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
   
-  <div>
-    <label for="name" hidden class="form-label" >Ingrese su nombre:</label>
-    <input class="inputForm" type="text" class="form-control" name="name" id="name" placeholder="Nombre..." autofocus>
-    {{#if formData.name}} value="{{formData.name}}" {{/if}}>
-  </div>
+          <label for="name" hidden class="form-label" >Ingrese su nombre:</label>
+          <input class="inputForm" type="text" class="form-control" name="name" id="name" placeholder="Nombre..." autofocus
+          {{#if formData.name}} value="{{formData.name}}" {{/if}}>
 
- <div>
-    <label for="apellido" hidden class="form-label">Ingrese su apellido:</label>
-    <input class="inputForm mt-1" type="text" class="form-control" name="apellido" id="apellido" placeholder="Apellido...">
-    {{#if formData.apellido}} value="{{formData.apellido}}" {{/if}}>
-  </div>
+          <label for="apellido" hidden class="form-label">Ingrese su apellido:</label>
+          <input class="inputForm mt-1" type="text" class="form-control" name="apellido" id="apellido" placeholder="Apellido...">
 
-  <div>
-    <label for="email" hidden class="form-label">Email</label>
-    <input class="inputForm mt-1" type="email" class="form-control" name="email" id="email" placeholder="example@company.com">
-    {{#if formData.email}} value="{{formData.email}}" {{/if}}>
-  </div>
+          <label for="email" hidden class="form-label">Email</label>
+          <input class="inputForm mt-1" type="email" class="form-control" name="email" id="email" placeholder="example@company.com"
+          {{#if formData.email}} value="{{formData.email}}" {{/if}}>
  
-  <div>
-    <label for="motivo" hidden class="form-label">Motivo de su consulta</label>
-    <select class="inputForm mt-1" id="motivo" class="form-select" name="motivo">
-      <option selected> Motivo de su consulta.</option>
-      <option>Lo que recibio no es lo que compro.</option>
-      <option>Quiere devolver el producto.</option>
-      <option>No le llego su compra.</option>
-      <option>Otras consultas.</option>
-    </select>
-  </div>
+          <label for="motivo" hidden class="form-label">Motivo de su consulta</label>
+          <select class="inputForm mt-1" id="motivo" class="form-select" name="motivo">
+            <option selected> Motivo de su consulta.</option>
+            <option>Lo que recibio no es lo que compro.</option>
+            <option>Quiere devolver el producto.</option>
+            <option>No le llego su compra.</option>
+            <option>Otras consultas.</option>
+          </select>
 
- <div>
-    <label for="descripcion" hidden class="form-label">Descripción:</label>
-    <textarea class="inputForm mt-1" name="descripcion" id="descripcion" cols="30" rows="10" placeholder="Ingrese su mensaje..." required></textarea>
-    {{#if formData.description}} value="{{formData.description}}" {{/if}}>
-  </div> 
-  
-  <div>
-    <input class="inputForm mt-1" id="btn-submit" type="submit" value="Enviar" class="btn btn-primary">
-  </div>
+          <label for="descripcion" hidden class="form-label">Descripción:</label>
+          <textarea class="inputForm mt-1" name="descripcion" id="descripcion" cols="30" rows="10" placeholder="Ingrese su mensaje..." required>{{formData.message}}</textarea>
 
-  </div>
-
-  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 infocontact">
-<h3 class="text-center">Rey-Ban Company</h3>
-  <p class="text-center">Gracias por contactarse con nosotros. Pronto un operador se pondra en contacto con Ud.</p>
-  <img src="/assets/imgcontact.jpg" alt="imagen de propaganda" class="rounded img-fluid img-thumbnail" id="imgcontact">
- 
-  </div></div>
-      </form>  
+          <div>
+            <input class="inputForm mt-1" id="btn-submit" type="submit" value="Enviar" class="btn btn-primary">
+          </div>
         </div>
-
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 infocontact">
+          <h3 class="text-center">Rey-Ban Company</h3>
+          <p class="text-center">Gracias por contactarse con nosotros. Pronto un operador se pondra en contacto con Ud.</p>
+          <img src="/assets/imgcontact.jpg" alt="imagen de propaganda" class="rounded img-fluid img-thumbnail" id="imgcontact">
+          </div>
+      </div>
+    </form>  
+  </div>
   <br><br><br><br><br><br><br><br><br><br>
 </body>
