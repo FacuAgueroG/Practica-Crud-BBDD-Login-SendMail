@@ -22,11 +22,11 @@ const emailMsg = {
     };    
 
 const transport = nodemailer.createTransport({
-        host: process.env.HOST,
-        port: process.env.PORT,
+        host: process.env.MAILTRAP_HOST,
+        port: process.env.MAILTRAP_PORT,
         auth: {
-          user: process.env.USER,
-          pass: process.env.PASS,}
+          user: process.env.MAILTRAP_USER_NAME,
+          pass: process.env.MAILTRAP_PASS,}
       });
 
 let sendMailStatus = await transport.sendMail(emailMsg); 
