@@ -1,10 +1,10 @@
 "use strict";
 
 const express = require ("express");
+const { body, validationResult } = require('express-validator');
 const routerContact = express.Router();
 const nodemailer = require ("nodemailer");
-const async = require("hbs/lib/async");
-const { body, validationResult } = require('express-validator');
+//const async = require("hbs/lib/async");
 
 /* METODO GET */
 routerContact.get("/", (req,res) => {
@@ -13,11 +13,10 @@ routerContact.get("/", (req,res) => {
 
 /* METODO POST */
 routerContact.post("/", async  (req,res) => {
-const emailfrom = req.body.email;
 const emailMsg = {
         to: "rey-ban@argentina.com",
-        from: emailfrom,
-        subject: req.body.motivo,
+        from: req.body.email,
+        subject: "Mensaje de usuario",
         html:`${req.body.name} ${req.body.apellido} envio el siguiente mensaje: ${req.body.descripcion}`,
     };    
 
@@ -30,7 +29,7 @@ const transport = nodemailer.createTransport({
         }
       });
 
-//let sendMailStatus = await transport.sendMail(emailMsg); 
+let sendMailStatus = await transport.sendMail(emailMsg); 
 
 res.redirect("/");
 

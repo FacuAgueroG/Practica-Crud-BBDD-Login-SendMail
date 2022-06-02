@@ -46,24 +46,29 @@ router.get("/deleteProduct/:id", async (req,res) => {
 
 
 
-router.post("/editProduct", async (req, res) => {
+router.post("/editProduct", async (req, res) => 
+{
     let img_id = null;
-    if(!req.files){
-        img_id = req.body.prevImg}
-        else {
-            const row = await inventario.getProduct(req.body.id);
-            await destroy(row[0].img);
+    if(!req.files)
+    {
+        img_id = req.body.prevImg
+    }
+    else 
+    {
+        const row = await inventario.getProduct(req.body.id);
+        await destroy(row[0].img);
 
-            let img = req.files.imgedit;
-            img_id = (await uploader(img.tempFilePath)).public_id}
+        let img = req.files.imgedit;
+        img_id = (await uploader(img.tempFilePath)).public_id
+    }
 
-const data = {
-id: req.body.id,
-modelo: req.body.modelo,
-tipo: req.body.tipo,
-descripcion: req.body.descripcion,
-cantidad: req.body.cantidad,
-img: img_id,
+    const data = {
+    id: req.body.id,
+    modelo: req.body.modelo,
+    tipo: req.body.tipo,
+    descripcion: req.body.descripcion,
+    cantidad: req.body.cantidad,
+    img: img_id,
 }
 
 await inventario.modifyProduct(data, data.id);
