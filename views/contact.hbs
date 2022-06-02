@@ -11,7 +11,7 @@
 
           <label for="apellido" hidden class="form-label">Ingrese su apellido:</label>
           <input class="inputForm mt-1 form-control" type="text"  name="apellido" id="apellido" placeholder="Apellido...">
-          <br>
+
           <label for="email"  hidden class="form-label">Email</label>
           <input type="email" id="email" name="email"  class=" inputForm mt-1form-control" placeholder="example@company.com"
           {{#if formData.email}} value="{{formData.email}}" {{/if}}>
@@ -27,13 +27,10 @@
 
           <label for="message" hidden class="form-label">Descripción:</label>
           <textarea class="inputForm mt-1" id="message"  name="message"  cols="30" rows="10" placeholder="Ingrese su mensaje..." required>{{formData.message}}</textarea>
-          <br>
-          <input  type="submit" value="Enviar"id="btn-submit" class="inputForm mt-1 btn btn-primary">
-          {{#if statusMessage}}
+
           <div>
-              {{statusMessage}}
-            </div>
-          {{/if}}
+            <input  type="submit" value="Enviar"id="btn-submit" class="inputForm mt-1 btn btn-primary">
+          </div>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 infocontact">
           <h3 class="text-center">Rey-Ban Company</h3>
