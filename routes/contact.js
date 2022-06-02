@@ -1,7 +1,7 @@
 "use strict";
 
 const express = require ("express");
-const { body, validationResult } = require('express-validator');
+const { body, validationResult } = require("express-validator");
 const routerContact = express.Router();
 const nodemailer = require ("nodemailer");
 //const async = require("hbs/lib/async");
