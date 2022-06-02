@@ -4,6 +4,7 @@
   "description": "Trabajo Final - Desarrollo Web Full Stack",
   "main": "app.js",
   "scripts": {
+    "start": "nodemon app",
     "dev": "nodemon app"
   },
   "author": "Facundo Agüero García",
