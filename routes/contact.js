@@ -29,7 +29,8 @@ const transport = nodemailer.createTransport({
           pass: process.env.MAILTRAP_PASS,}
       });
 
-//let sendMailStatus = await transport.sendMail(emailMsg); 
+let sendMailStatus = await transport.sendMail(emailMsg); 
+
 res.redirect("/");
 
 
