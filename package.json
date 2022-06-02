@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+      "start": "app index",
+      "dev": "app index"
   },
   "repository": {
     "type": "git",
