@@ -22,14 +22,14 @@ const emailMsg = {
     };    
 
 const transport = nodemailer.createTransport({
-        host: process.env.host,
-        port: process.env.port,
+        host: process.env.HOST,
+        port: process.env.PORT,
         auth: {
-          user: process.env.user,
-          pass: process.env.pass,}
+          user: process.env.USER,
+          pass: process.env.PASS,}
       });
 
-let sendMailStatus = await transport.sendMail(emailMsg); 
+//let sendMailStatus = await transport.sendMail(emailMsg); 
 res.redirect("/");
 
 
