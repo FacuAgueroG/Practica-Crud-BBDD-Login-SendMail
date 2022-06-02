@@ -26,7 +26,8 @@ const transport = nodemailer.createTransport({
         port: process.env.MAILTRAP_PORT,
         auth: {
           user: process.env.MAILTRAP_USER_NAME,
-          pass: process.env.MAILTRAP_PASS,}
+          pass: process.env.MAILTRAP_PASS
+        }
       });
 
 let sendMailStatus = await transport.sendMail(emailMsg); 
