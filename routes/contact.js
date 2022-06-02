@@ -30,7 +30,7 @@ const transport = nodemailer.createTransport({
         }
       });
 
-let sendMailStatus = await transport.sendMail(emailMsg); 
+//let sendMailStatus = await transport.sendMail(emailMsg); 
 
 res.redirect("/");
 
