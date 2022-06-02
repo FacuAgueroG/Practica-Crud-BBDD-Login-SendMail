@@ -1,13 +1,12 @@
 "use strict";
 
 const express = require ("express");
-const session = require("express-session")
 const path = require ("path");
-const hbs = require ("hbs");
-const fileupload = require("express-fileupload");
 require("dotenv").config();
 //const session = require("express-session");
+const session = require("express-session")
 const PORT = process.env.PORT || 3000
+const hbs = require ("hbs");
 hbs.registerPartials(path.join(__dirname,"./views/partials"));
 const fileupload = require("express-fileupload");
 
@@ -45,10 +44,6 @@ const secured = async (req, res, next)=>{
         useTempFiles: true,
         tempFileDir: "/tmp/",
     }) )
-
-app.set("view engine", "hbs");
-app.use(express.static(path.join(__dirname,"./public")))
-
 app.use("/", isAuth, routeIndex);
 app.use("/contact", routeContact);
 app.use("/store", routeStore);
@@ -57,7 +52,8 @@ app.use("/inventario", secured, routerinventario);
 app.use("/addItem", secured, routeraddItem);
 app.use("/editItem", secured, routeEditItem);
 
-
+app.set("view engine", "hbs");
+app.use(express.static(path.join(__dirname,"./public")))
 
 app.listen(PORT, () => {
     console.warn(`Server running in http://localhost:${PORT}`);
