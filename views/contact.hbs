@@ -13,7 +13,7 @@
           <input class="inputForm mt-1 form-control" type="text"  name="apellido" id="apellido" placeholder="Apellido...">
 
           <label for="email"  hidden class="form-label">Email</label>
-          <input type="email" id="email" name="email"  class=" inputForm mt-1form-control" placeholder="example@company.com"
+          <input type="email" id="email" name="email"  class=" inputForm mt-1 form-control" placeholder="example@company.com"
           {{#if formData.email}} value="{{formData.email}}" {{/if}}>
  
           <label for="motivo" hidden class="form-label">Motivo de su consulta</label>
@@ -29,7 +29,7 @@
           <textarea class="inputForm mt-1" id="message"  name="message"  cols="30" rows="10" placeholder="Ingrese su mensaje..." required>{{formData.message}}</textarea>
 
           <div>
-            <input  type="submit" value="Enviar"id="btn-submit" class="inputForm mt-1 btn btn-primary">
+            <input class="inputForm mt-1" id="btn-submit" type="submit" value="Enviar" class="btn btn-primary">
           </div>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 infocontact">
