@@ -10,16 +10,19 @@
   <div>
     <label for="name" hidden class="form-label" >Ingrese su nombre:</label>
     <input class="inputForm" type="text" class="form-control" name="name" id="name" placeholder="Nombre..." autofocus>
+    {{#if formData.name}} value="{{formData.name}}" {{/if}}>
   </div>
 
  <div>
     <label for="apellido" hidden class="form-label">Ingrese su apellido:</label>
     <input class="inputForm mt-1" type="text" class="form-control" name="apellido" id="apellido" placeholder="Apellido...">
+    {{#if formData.apellido}} value="{{formData.apellido}}" {{/if}}>
   </div>
 
   <div>
     <label for="email" hidden class="form-label">Email</label>
     <input class="inputForm mt-1" type="email" class="form-control" name="email" id="email" placeholder="example@company.com">
+    {{#if formData.email}} value="{{formData.email}}" {{/if}}>
   </div>
  
   <div>
@@ -36,6 +39,7 @@
  <div>
     <label for="descripcion" hidden class="form-label">Descripción:</label>
     <textarea class="inputForm mt-1" name="descripcion" id="descripcion" cols="30" rows="10" placeholder="Ingrese su mensaje..." required></textarea>
+    {{#if formData.description}} value="{{formData.description}}" {{/if}}>
   </div> 
   
   <div>

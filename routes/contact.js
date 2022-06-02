@@ -17,7 +17,7 @@ routerContact.post("/", async  (req,res) => {
     to: "rey-ban@argentina.com",
     from: req.body.email,
     subject: "Mensaje de usuario",
-    html:`${req.body.name} ${req.body.apellido} envio el siguiente mensaje: ${req.body.descripcion}`
+    html:`${req.body.name} ${req.body.apellido} envio el siguiente mensaje: ${req.body.description}`
     };    
 
   const transport = nodemailer.createTransport({
