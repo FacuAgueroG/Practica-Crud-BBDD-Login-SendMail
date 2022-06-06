@@ -9,7 +9,7 @@
 - SendMail, el sendMail en este proyecto actualmente esta deshabilitado, pero en el siguiente proyecto de la misma categoria esto esta activado. Revisar
 El sendmail utilizado esta realizado con nodemailer y mailtrap
 
---
+________________________________________________________________________________________________________________________________________
 
 - Proyecto con JS, Node JS, express, Mysql => Workbench. Con modelo-vista-controlador y trabajo de DOM
 
