@@ -1,20 +1,18 @@
 <body class="bodyStore">
-  
-<div class="container">
-<div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 mt-200px" id="gallery">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 mt-200px" id="gallery">
 
- {{#each data}}
-<div class="card m-4" style="width:18rem">
-  <img src="{{imageURL}}" class="card-img-top rounded img-fluid p-2" alt="lentes de sol">
-  <div class="card-body">
-    <h5 class="card-title">{{modelo}}</h5>
-    <p class="card-text">{{descripcion}}</p>
-    <p class="card-text">{{cantidad}} Unidades en Stock</p>
+      {{#each data}}
+        <div class="card m-4" style="width:18rem">
+          <img src="{{imageURL}}" class="card-img-top rounded img-fluid p-2" alt="lentes de sol">
+          <div class="card-body">
+            <h5 class="card-title">{{modelo}}</h5>
+            <p class="card-text">{{descripcion}}</p>
+            <p class="card-text">{{cantidad}} Unidades en Stock</p>
+          </div>
+        </div>
+      {{/each}}
+                
+    </div>           
   </div>
-</div>
- {{/each}}
-              
-</div>           
-</div>
-
 </body>
